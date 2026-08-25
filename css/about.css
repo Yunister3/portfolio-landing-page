@@ -1,0 +1,309 @@
+/* ===== ABOUT PAGE ===== */
+.about-header {
+    padding: 10rem 2rem 4rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.about-header-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+.accent {
+    background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.6) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ===== ABOUT CONTENT ===== */
+.about-content {
+    padding: 6rem 2rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-text h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+
+.about-text p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    max-width: 440px;
+}
+
+/* About Stats */
+.about-stats {
+    display: flex;
+    gap: 3rem;
+    margin: 3rem 0;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.about-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.about-stat-number {
+    font-family: 'Geist Mono', monospace;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.about-stat-label {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+}
+
+/* About CTA */
+.about-cta {
+    display: flex;
+    gap: 0.75rem;
+}
+
+/* Skills */
+.about-skills h3 {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: 2rem;
+}
+
+.skills-category {
+    margin-bottom: 2rem;
+}
+
+.skills-category h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.skill-tag {
+    padding: 0.35rem 0.75rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 9999px;
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+    color: var(--text);
+}
+
+/* ===== TIMELINE ===== */
+.timeline-section {
+    padding: 6rem 2rem 8rem;
+    border-top: 1px solid var(--border);
+}
+
+.timeline-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.timeline {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 3rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--border);
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 3rem;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -3.35rem;
+    top: 0.3rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--text-tertiary);
+    border: 2px solid var(--bg);
+}
+
+.timeline-item:first-child .timeline-dot {
+    background: #fff;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.timeline-date {
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.timeline-desc {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+}
+
+/* ===== ABOUT MOBILE ===== */
+@media (max-width: 768px) {
+    .about-header {
+        padding: 8rem 1.5rem 3rem;
+    }
+
+    .about-title {
+        font-size: 2.2rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .about-content {
+        padding: 3rem 1.5rem;
+    }
+
+    .about-stats {
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin: 2.5rem 0;
+    }
+
+    .about-stat-number {
+        font-size: 1.6rem;
+    }
+
+    .about-stat-label {
+        font-size: 0.72rem;
+    }
+
+    .about-cta {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
+    .about-cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .about-skills h3 {
+        font-size: 0.65rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 1.5rem;
+    }
+
+    .skills-category {
+        margin-bottom: 1.5rem;
+    }
+
+    .skills-category h4 {
+        font-size: 0.8rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .skill-tag {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.65rem;
+    }
+
+    .timeline-section {
+        padding: 4rem 1.5rem 6rem;
+    }
+
+    .timeline-header {
+        margin-bottom: 3rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .timeline {
+        padding-left: 2rem;
+        max-width: 100%;
+    }
+
+    .timeline::before {
+        left: 0;
+    }
+
+    .timeline-dot {
+        left: -2.35rem;
+        width: 6px;
+        height: 6px;
+    }
+
+    .timeline-item {
+        padding-bottom: 2rem;
+    }
+
+    .timeline-date {
+        font-size: 0.7rem;
+    }
+
+    .timeline-title {
+        font-size: 1rem;
+    }
+
+    .timeline-desc {
+        font-size: 0.82rem;
+    }
+}

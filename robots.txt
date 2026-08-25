@@ -1,0 +1,5 @@
+# robots.txt — Nova Tech
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-landing-page-psi-three.vercel.app/sitemap.xml

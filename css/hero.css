@@ -1,0 +1,91 @@
+/* ===== HERO ===== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 8rem 2rem 4rem;
+    overflow: hidden;
+}
+
+/* Dark overlay */
+.hero-darkness {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: #000;
+}
+
+/* Hero content */
+.hero-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Left text */
+.hero-text {
+    flex: 1;
+    max-width: 480px;
+    min-width: 300px;
+}
+
+.hero-headline {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+}
+
+.hero-headline .line {
+    display: block;
+}
+
+/* Reserve vertical space so the headline doesn't jump while the
+   typing effect fills the second line (CLS fix) */
+.hero-headline .line:nth-child(2) {
+    min-height: 1.1em;
+}
+
+/* Center — interactive dots grid (24x24 pixel art monitor).
+   Sits on the right where the old tagline column used to be. */
+.hero-dots {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(24, 1fr);
+    gap: 1px;
+    width: min(320px, 36vw);
+    height: min(320px, 36vw);
+    justify-items: stretch;
+    align-items: stretch;
+    padding: 10px;
+    box-sizing: content-box;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    /* Finger drags on the grid steer the beam instead of scrolling */
+    touch-action: none;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.dot {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.04);
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}

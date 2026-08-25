@@ -1,0 +1,321 @@
+/* ===== PAGE HEADER (shared by projects, about, contact) ===== */
+.page-header {
+    padding: 10rem 2rem 4rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.page-header-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.page-desc {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* ===== FILTER TABS ===== */
+.filter-section {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.35rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 9999px;
+}
+
+.filter-tab {
+    padding: 0.5rem 1.2rem;
+    background: transparent;
+    border: none;
+    border-radius: 9999px;
+    color: var(--text-secondary);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-tab:hover {
+    color: var(--text);
+}
+
+.filter-tab.active {
+    background: #fff;
+    color: #000;
+}
+
+/* ===== PROJECTS GRID ===== */
+.projects-section {
+    padding: 3rem 2rem 6rem;
+}
+
+.projects-grid {
+    display: grid;
+    gap: 1px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.project-card {
+    background: var(--bg);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.project-card:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.project-card:hover .project-arrow {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.project-card:hover .project-preview {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.project-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--text-secondary);
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.project-arrow {
+    opacity: 0;
+    transform: translate(-4px, 4px);
+    transition: all 0.3s ease;
+    color: var(--text);
+}
+
+.project-arrow svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.project-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.project-desc {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+}
+
+.project-preview {
+    height: 160px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-preview-placeholder {
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.project-tag {
+    padding: 0.25rem 0.65rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 9999px;
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+}
+
+/* ===== FOOTER CONTENT ===== */
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links a {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--text);
+}
+
+/* ===== ACTIVE NAV LINK ===== */
+.nav-link-active {
+    color: var(--text) !important;
+}
+
+/* ===== PROJECTS MOBILE ===== */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 8rem 1.5rem 3rem;
+    }
+
+    .page-title {
+        font-size: 2.2rem;
+    }
+
+    .filter-section {
+        padding: 1.5rem 1rem;
+        position: sticky;
+        top: 56px;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .filter-tabs {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        justify-content: flex-start;
+    }
+
+    .filter-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter-tab {
+        white-space: nowrap;
+        flex-shrink: 0;
+        font-size: 0.8rem;
+        padding: 0.45rem 1rem;
+    }
+
+    .projects-section {
+        padding: 2rem 0.75rem 4rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        margin: 0 0.5rem;
+        width: calc(100% - 1rem);
+        border-radius: 14px;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+    }
+
+    .project-card:first-child {
+        border-radius: 14px 14px 0 0;
+        padding-top: 2rem;
+    }
+
+    .project-card:last-child {
+        border-radius: 0 0 14px 14px;
+        padding-bottom: 2rem;
+    }
+
+    .project-title {
+        font-size: 1.05rem;
+    }
+
+    .project-desc {
+        font-size: 0.82rem;
+    }
+
+    .project-preview {
+        height: 130px;
+        border-radius: 6px;
+    }
+
+    .project-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .project-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .project-tags {
+        gap: 0.35rem;
+    }
+
+    .project-tag {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.55rem;
+    }
+}

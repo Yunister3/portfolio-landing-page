@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found — Nova Tech</title>
+    <meta name="description" content="This signal drifted off-grid. The page you are looking for does not exist.">
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Page Not Found — Nova Tech">
+    <meta property="og:description" content="This signal drifted off-grid.">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .nf-wrap {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            gap: 1.25rem;
+        }
+        .nf-code {
+            font-size: clamp(5rem, 18vw, 11rem);
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: 0.08em;
+            background: linear-gradient(180deg, #fff 30%, rgba(255,255,255,0.25));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .nf-pixels {
+            display: grid;
+            grid-template-columns: repeat(13, 10px);
+            gap: 3px;
+            margin: 0.5rem 0 0.25rem;
+        }
+        .nf-pixels span {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            background: rgba(255, 255, 255, 0.06);
+        }
+        .nf-pixels span.on { background: rgba(255, 255, 255, 0.85); }
+        .nf-title { font-size: 1.35rem; font-weight: 700; }
+        .nf-text { color: var(--text-secondary, rgba(255,255,255,0.62)); max-width: 46ch; }
+        .nf-actions { display: flex; gap: 0.9rem; flex-wrap: wrap; justify-content: center; margin-top: 0.5rem; }
+        .nf-btn {
+            padding: 0.75rem 1.6rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.22);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s ease, border-color 0.2s ease;
+        }
+        .nf-btn:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.45); }
+        @media (prefers-reduced-motion: reduce) {
+            * { animation: none !important; transition: none !important; }
+        }
+    </style>
+</head>
+<body>
+    <main class="nf-wrap">
+        <div class="nf-code" aria-hidden="true">404</div>
+
+        <!-- dead pixel monitor -->
+        <div class="nf-pixels" role="img" aria-label="A pixel monitor showing a flat signal">
+            <span></span><span></span><span class="on"></span><span></span><span></span><span></span><span class="on"></span><span></span><span></span><span></span><span class="on"></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span>
+        </div>
+
+        <h1 class="nf-title">Signal lost.</h1>
+        <p class="nf-text">The page you are looking for drifted off-grid or never existed. Let's route you back to something real.</p>
+
+        <div class="nf-actions">
+            <a class="nf-btn" href="index.html">Back to Base</a>
+            <a class="nf-btn" href="projects.html">View Projects</a>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

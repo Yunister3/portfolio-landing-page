@@ -1,0 +1,49 @@
+/* ===== FEATURES ===== */
+.features {
+    padding: 6rem 2rem;
+    border-top: 1px solid var(--border);
+}
+
+.features-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.feature-card {
+    padding: 2.5rem 2rem;
+    transition: background 0.3s;
+}
+.feature-card:hover { background: rgba(255,255,255,0.02); }
+
+.feature-icon {
+    width: 36px; height: 36px;
+    border-radius: 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+.feature-icon svg {
+    width: 18px; height: 18px;
+    stroke: var(--text-secondary); fill: none;
+    stroke-width: 1.5;
+    stroke-linecap: round; stroke-linejoin: round;
+}
+
+.feature-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.feature-desc {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Nova Tech — our mission, technologies, and journey in building AI-powered solutions.">
+    <meta name="robots" content="index, follow">
+    <title>Nova Tech — About</title>
+    <link rel="canonical" href="https://portfolio-landing-page-psi-three.vercel.app/about.html">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://portfolio-landing-page-psi-three.vercel.app/about.html">
+    <meta property="og:title" content="Nova Tech — About">
+    <meta property="og:description" content="Learn about Nova Tech — our mission, technologies, and journey in building AI-powered solutions.">
+    <meta property="og:image" content="https://portfolio-landing-page-psi-three.vercel.app/assets/og-image.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Nova Tech — About">
+    <meta property="twitter:description" content="Learn about Nova Tech — our mission, technologies, and journey in building AI-powered solutions.">
+    <meta property="twitter:image" content="https://portfolio-landing-page-psi-three.vercel.app/assets/og-image.png">
+
+    <!-- Favicon / PWA -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <svg viewBox="0 0 75 65"><path d="M37.59.25l36.91 64H.69l36.9-64z"/></svg>
+            NOVA TECH
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html" class="nav-link-active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><button class="nav-btn" type="button">Get Started</button></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-controls="mobileMenu" aria-expanded="false">
+            <span class="bar bar-1"></span><span class="bar bar-2"></span><span class="bar bar-3"></span>
+        </button>
+        <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+            <div class="menu-inner">
+                <div class="menu-links">
+                    <a href="index.html" class="mobile-menu-link" data-index="0"><span class="link-number">01</span><span class="link-text">Home</span><svg class="link-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                    <a href="projects.html" class="mobile-menu-link" data-index="1"><span class="link-number">02</span><span class="link-text">Projects</span><svg class="link-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                    <a href="about.html" class="mobile-menu-link" data-index="2"><span class="link-number">03</span><span class="link-text">About</span><svg class="link-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                    <a href="contact.html" class="mobile-menu-link" data-index="3"><span class="link-number">04</span><span class="link-text">Contact</span><svg class="link-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                </div>
+                <div class="menu-bottom">
+                    <a href="contact.html" class="mobile-cta-btn"><span class="cta-text">Get Started</span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                    <div class="menu-divider"></div>
+                    <div class="menu-social">
+                        <a href="https://github.com/Yunister3" target="_blank" rel="noopener noreferrer" class="menu-social-link" aria-label="GitHub"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Header -->
+    <section class="about-header">
+        <div class="about-header-content">
+            <span class="section-label">Who We Are</span>
+            <h1 class="about-title">Building the future<br>with <span class="accent">AI</span></h1>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="about-grid">
+            <!-- Left: Info -->
+            <div class="about-info">
+                <div class="about-text">
+                    <h2>Our Mission</h2>
+                    <p>We specialize in building intelligent systems that transform how businesses operate. From custom AI models to automated workflows, we deliver solutions that push the boundaries of what's possible.</p>
+                </div>
+
+                <div class="about-stats">
+                    <div class="about-stat">
+                        <span class="about-stat-number">50+</span>
+                        <span class="about-stat-label">Projects</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="about-stat-number">3+</span>
+                        <span class="about-stat-label">Years</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="about-stat-number">99%</span>
+                        <span class="about-stat-label">Satisfaction</span>
+                    </div>
+                </div>
+
+                <div class="about-cta">
+                    <a href="contact.html" class="btn btn-primary">
+                        <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        Let's Talk
+                    </a>
+                    <a href="projects.html" class="btn btn-secondary">View Projects</a>
+                </div>
+            </div>
+
+            <!-- Right: Skills -->
+            <div class="about-skills">
+                <h3>Technologies</h3>
+                <div class="skills-category">
+                    <h4>AI / ML</h4>
+                    <div class="skills-list">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">LLMs</span>
+                        <span class="skill-tag">Computer Vision</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h4>Frontend</h4>
+                    <div class="skills-list">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Tailwind</span>
+                        <span class="skill-tag">Three.js</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h4>Backend</h4>
+                    <div class="skills-list">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h4>Cloud & DevOps</h4>
+                    <div class="skills-list">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Vercel</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Kubernetes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="timeline-section">
+        <div class="timeline-header">
+            <span class="section-label">Journey</span>
+            <h2 class="section-title">Our Path</h2>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2024</span>
+                    <h3 class="timeline-title">AI-Powered Platform</h3>
+                    <p class="timeline-desc">Launched our flagship AI automation platform serving 100+ businesses worldwide.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2023</span>
+                    <h3 class="timeline-title">Team Expansion</h3>
+                    <p class="timeline-desc">Grew to a team of 15+ engineers specializing in AI, full-stack, and DevOps.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2022</span>
+                    <h3 class="timeline-title">First Major Client</h3>
+                    <p class="timeline-desc">Delivered our first enterprise AI solution, automating workflows for a Fortune 500 company.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2021</span>
+                    <h3 class="timeline-title">Founded</h3>
+                    <p class="timeline-desc">Nova Tech was founded with a vision to make AI accessible and practical for every business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-text">&copy; <span data-copy-year>2026</span> Nova Tech. All rights reserved.</p>
+                <div class="footer-social">
+                                        <a href="https://github.com/Yunister3" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    </a>
+</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="api-config.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
